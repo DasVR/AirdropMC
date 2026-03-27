@@ -1,6 +1,8 @@
-# AirdropSystem
+# AirdropSystem (AirdropMC)
 
 Steampunk-themed Paper plugin that spawns competitive airdrop crates with events, keys, leaderboards, and server-side integrations.
+
+Licensed under GPL-3.0; see [LICENSE](LICENSE).
 
 ## Highlights
 
