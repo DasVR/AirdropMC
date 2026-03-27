@@ -1,0 +1,59 @@
+pool:
+  - material: NETHERITE_SWORD
+    name: '&4&lEclipse Harbinger'
+    lore:
+      - '&cTorn from the void itself.'
+      - '&4Only the worthy may wield it.'
+    enchantments:
+      SHARPNESS: 5
+      SWEEPING_EDGE: 3
+      UNBREAKING: 3
+      FIRE_ASPECT: 2
+      LOOTING: 3
+    amount: 1
+    weight: 10
+  - material: NETHERITE_CHESTPLATE
+    name: '&4&lVoidforged Carapace'
+    lore:
+      - '&cAbsorbs light. Radiates dread.'
+    enchantments:
+      PROTECTION: 4
+      UNBREAKING: 3
+      THORNS: 3
+    amount: 1
+    weight: 10
+  - material: ENCHANTED_GOLDEN_APPLE
+    amount: [2, 4]
+    weight: 15
+  - material: TOTEM_OF_UNDYING
+    name: '&4&lEclipse Ward'
+    amount: [1, 2]
+    weight: 12
+  - material: NETHER_STAR
+    name: '&4&lEclipse Core'
+    lore:
+      - '&cPulses with void energy.'
+    amount: [1, 2]
+    weight: 8
+  - material: ELYTRA
+    name: '&4&lVoid Wings'
+    lore:
+      - '&cEternal flight, at a cost.'
+    enchantments:
+      UNBREAKING: 3
+      MENDING: 1
+    amount: 1
+    weight: 5
+  - material: BEACON
+    name: '&4&lEclipse Monolith'
+    amount: 1
+    weight: 5
+  - material: DRAGON_EGG
+    name: '&4&lVoid Embryo'
+    lore:
+      - '&cWhat hatches from this?'
+    amount: 1
+    weight: 2
+
+items_per_crate: [4, 8]
+allow_duplicates: false

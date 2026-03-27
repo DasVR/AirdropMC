@@ -1,0 +1,33 @@
+pool:
+  - material: IRON_INGOT
+    amount: [4, 16]
+    weight: 40
+  - material: COAL
+    amount: [8, 32]
+    weight: 35
+  - material: OAK_PLANKS
+    amount: [16, 64]
+    weight: 30
+  - material: BREAD
+    amount: [4, 12]
+    weight: 25
+  - material: COPPER_INGOT
+    amount: [4, 12]
+    weight: 20
+  - material: ARROW
+    amount: [8, 32]
+    weight: 20
+  - material: LEATHER
+    amount: [4, 12]
+    weight: 15
+  - material: IRON_PICKAXE
+    name: '&7Salvaged Pick'
+    amount: 1
+    weight: 10
+  - material: SHIELD
+    name: '&7Dented Buckler'
+    amount: 1
+    weight: 8
+
+items_per_crate: [3, 6]
+allow_duplicates: false

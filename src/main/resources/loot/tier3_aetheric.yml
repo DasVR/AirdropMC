@@ -1,0 +1,46 @@
+pool:
+  - material: DIAMOND
+    amount: [2, 6]
+    weight: 25
+  - material: NETHERITE_SCRAP
+    amount: [1, 3]
+    weight: 15
+  - material: ENCHANTED_BOOK
+    name: '&bAetheric Grimoire'
+    enchantments:
+      SHARPNESS: 3
+    amount: 1
+    weight: 12
+  - material: DIAMOND_SWORD
+    name: '&bAether Blade'
+    lore:
+      - '&7Hums with residual aether energy.'
+    enchantments:
+      SHARPNESS: 3
+      UNBREAKING: 2
+    amount: 1
+    weight: 8
+  - material: ELYTRA
+    name: '&bAetheric Glider Prototype'
+    lore:
+      - '&7Unstable. Handle with care.'
+    enchantments:
+      UNBREAKING: 2
+    amount: 1
+    weight: 3
+  - material: GOLDEN_APPLE
+    amount: [1, 3]
+    weight: 15
+  - material: ENDER_PEARL
+    amount: [4, 8]
+    weight: 18
+  - material: TRIDENT
+    name: '&bAether Lance'
+    enchantments:
+      LOYALTY: 3
+      IMPALING: 2
+    amount: 1
+    weight: 5
+
+items_per_crate: [4, 7]
+allow_duplicates: false

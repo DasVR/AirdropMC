@@ -1,0 +1,42 @@
+pool:
+  - material: IRON_INGOT
+    amount: [8, 24]
+    weight: 40
+  - material: COPPER_INGOT
+    amount: [4, 16]
+    weight: 30
+  - material: CROSSBOW
+    name: '&6Ironclad Repeater'
+    lore:
+      - '&7Forged in the Aetheric Foundry.'
+    enchantments:
+      MULTISHOT: 1
+      QUICK_CHARGE: 2
+    weight: 10
+  - material: BLAST_FURNACE
+    name: '&6Compact Smelter Mk. II'
+    amount: 1
+    weight: 8
+  - material: IRON_CHESTPLATE
+    name: '&6Ironclad Vest'
+    enchantments:
+      PROTECTION: 2
+    amount: 1
+    weight: 8
+  - material: SPYGLASS
+    name: '&6Brass Scope'
+    lore:
+      - '&7Standard issue recon optic.'
+    amount: 1
+    weight: 12
+  - material: CLOCK
+    name: '&6Chronometer'
+    amount: 1
+    weight: 10
+  - material: NETHER_STAR
+    name: '&d??? Sealed Parcel'
+    mystery_only: true
+    weight: 100
+
+items_per_crate: [4, 8]
+allow_duplicates: false

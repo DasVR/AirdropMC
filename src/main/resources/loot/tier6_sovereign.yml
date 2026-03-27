@@ -1,0 +1,46 @@
+pool:
+  - material: NETHERITE_INGOT
+    amount: [1, 3]
+    weight: 20
+  - material: NETHERITE_SWORD
+    name: '&6&lSovereign Greatsword'
+    lore:
+      - '&7Forged by the Oblivion Sanctum smiths.'
+      - '&eA weapon fit for a king.'
+    enchantments:
+      SHARPNESS: 5
+      UNBREAKING: 3
+      FIRE_ASPECT: 2
+    amount: 1
+    weight: 8
+  - material: NETHERITE_CHESTPLATE
+    name: '&6&lSovereign Plate'
+    lore:
+      - '&7Impenetrable alloy armour.'
+    enchantments:
+      PROTECTION: 4
+      UNBREAKING: 3
+    amount: 1
+    weight: 8
+  - material: ENCHANTED_GOLDEN_APPLE
+    amount: [1, 2]
+    weight: 12
+  - material: TOTEM_OF_UNDYING
+    name: '&6&lSovereign Totem'
+    amount: 1
+    weight: 10
+  - material: BEACON
+    name: '&6&lSovereign Beacon Core'
+    amount: 1
+    weight: 5
+  - material: DRAGON_BREATH
+    name: '&6&lBottled Aether'
+    amount: [2, 6]
+    weight: 15
+  - material: NETHER_STAR
+    name: '&6&lSovereign Star'
+    amount: 1
+    weight: 5
+
+items_per_crate: [3, 6]
+allow_duplicates: false

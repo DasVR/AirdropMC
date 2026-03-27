@@ -1,0 +1,33 @@
+zones:
+  spawn_field:
+    world: world
+    min-x: -500
+    max-x: 500
+    min-z: -500
+    max-z: 500
+    enabled: true
+    weight: 1
+    allow-cave: false
+    difficulty-bonus: 0.0
+
+  northern_wastes:
+    world: world
+    min-x: -1000
+    max-x: 1000
+    min-z: -2000
+    max-z: -500
+    enabled: true
+    weight: 2
+    allow-cave: true
+    difficulty-bonus: 0.35
+
+  eastern_docks:
+    world: world
+    min-x: 500
+    max-x: 1500
+    min-z: -500
+    max-z: 500
+    enabled: true
+    weight: 1
+    allow-cave: true
+    difficulty-bonus: 0.15

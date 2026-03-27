@@ -1,0 +1,31 @@
+pool:
+  - material: GOLD_INGOT
+    amount: [8, 24]
+    weight: 30
+  - material: IRON_BLOCK
+    amount: [2, 6]
+    weight: 25
+  - material: DIAMOND
+    amount: [2, 5]
+    weight: 20
+  - material: EXPERIENCE_BOTTLE
+    amount: [8, 24]
+    weight: 20
+  - material: GOLDEN_APPLE
+    amount: [1, 3]
+    weight: 15
+  - material: IRON_SWORD
+    name: '&3Brass Saber'
+    enchantments:
+      sharpness: 2
+    amount: 1
+    weight: 10
+  - material: IRON_CHESTPLATE
+    name: '&3Brass Cuirass'
+    enchantments:
+      protection: 2
+    amount: 1
+    weight: 8
+
+items_per_crate: [3, 5]
+allow_duplicates: false

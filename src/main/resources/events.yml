@@ -1,0 +1,25 @@
+seasonal:
+  - name: Halloween
+    start: '10-25'
+    end: '11-01'
+    pool_file: seasonal/halloween.yml
+    announce: '&6[Oblivion] The spirits stir. All crates carry cursed cargo.'
+  - name: Server Anniversary
+    start: '06-15'
+    end: '06-17'
+    pool_file: seasonal/anniversary.yml
+    double_drop: true
+
+double_drop:
+  vote_threshold: 50
+  default_duration: 60
+
+mystery_crate:
+  chance: 0.05
+
+crate_defence:
+  enabled: true
+  tiers:
+    - tier3
+    - tier4
+    - tier5

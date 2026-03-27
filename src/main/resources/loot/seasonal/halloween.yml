@@ -1,0 +1,42 @@
+pool:
+  - material: JACK_O_LANTERN
+    name: '&6Cursed Lantern'
+    lore:
+      - '&7Flickers with an eerie glow.'
+    amount: [1, 3]
+    weight: 25
+    seasonal_only: true
+  - material: SKELETON_SKULL
+    name: '&5Haunted Skull'
+    lore:
+      - '&7It whispers when no one is around.'
+    amount: 1
+    weight: 15
+    seasonal_only: true
+  - material: POTION
+    name: '&5Witches Brew'
+    lore:
+      - '&7Bubbling with unknown effects.'
+    amount: [1, 2]
+    weight: 20
+    seasonal_only: true
+  - material: GOLDEN_APPLE
+    name: '&6Candy Apple'
+    lore:
+      - '&7Halloween treat - suspiciously shiny.'
+    amount: [1, 3]
+    weight: 20
+    seasonal_only: true
+  - material: BOW
+    name: '&5Phantom Bow'
+    lore:
+      - '&7Arrows fly silently.'
+    enchantments:
+      POWER: 3
+      INFINITY: 1
+    amount: 1
+    weight: 8
+    seasonal_only: true
+
+items_per_crate: [1, 3]
+allow_duplicates: false

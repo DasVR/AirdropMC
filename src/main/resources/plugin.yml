@@ -1,0 +1,36 @@
+name: AirdropSystem
+version: '${version}'
+main: dev.oblivionsanctum.airdrop.AirdropPlugin
+api-version: '1.20'
+description: Full-featured steampunk airdrop system with events & competition
+authors: [Arriq]
+softdepend: [WorldGuard, PlaceholderAPI, VotingPlugin, NuVotifier]
+
+commands:
+  airdrop:
+    description: Airdrop system command root
+    usage: /airdrop <subcommand>
+    permission: airdrop.use
+    aliases: [ad]
+
+permissions:
+  airdrop.use:
+    default: true
+  airdrop.admin.drop:
+    default: op
+  airdrop.admin.schedule:
+    default: op
+  airdrop.admin.event:
+    default: op
+  airdrop.admin.zones:
+    default: op
+  airdrop.admin.reload:
+    default: op
+  airdrop.admin.history:
+    default: op
+  airdrop.admin.keys:
+    default: op
+  airdrop.admin.replayfx:
+    default: op
+  airdrop.admin.delete:
+    default: op

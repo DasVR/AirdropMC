@@ -1,0 +1,27 @@
+pool:
+  - material: IRON_INGOT
+    amount: [6, 18]
+    weight: 35
+  - material: COPPER_INGOT
+    amount: [8, 24]
+    weight: 30
+  - material: COAL
+    amount: [12, 48]
+    weight: 30
+  - material: CHAIN
+    amount: [2, 6]
+    weight: 20
+  - material: LEATHER
+    amount: [6, 16]
+    weight: 20
+  - material: IRON_AXE
+    name: '&2Patchwork Hatchet'
+    amount: 1
+    weight: 10
+  - material: CHAINMAIL_HELMET
+    name: '&2Scrap Helm'
+    amount: 1
+    weight: 8
+
+items_per_crate: [3, 6]
+allow_duplicates: false

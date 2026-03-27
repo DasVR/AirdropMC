@@ -1,0 +1,327 @@
+airdrop:
+  auto-schedule: true
+  require-players-online: true
+  min-interval: 1800
+  max-interval: 3600
+  world: world
+
+  # Location mode: "zones" = use zones.yml, "world-border" = random within world border, "both" = try zones first then world-border
+  location-mode: world-border
+  fallback-random-coords: true
+  spawn-altitude-offset: 80
+  announce-on-schedule: true
+  log-drops: true
+  log-file: history.log
+  worldguard-integration: true
+
+  # World-border mode settings (used when location-mode is "world-border" or "both")
+  world-border:
+    max-attempts: 50
+    max-radius: 1500
+    avoid-water: true
+    avoid-lava: true
+    min-distance-from-spawn: 100
+    padding: 50
+
+  # Prefer dropping within a radius of online players (still not right on top of them).
+  # Only used for automatic drops when location-mode is "world-border" or "both".
+  player-bias:
+    enabled: false
+    min-radius: 200
+    max-radius: 500
+    max-attempts: 40
+
+  tier-weights:
+    tier1: 35
+    tier2: 25
+    tier3: 20
+    tier4: 10
+    tier5: 5
+    tier6: 3
+    tier7: 2
+
+  tier-cooldowns:
+    tier1: 0
+    tier2: 0
+    tier3: 300
+    tier4: 900
+    tier5: 1800
+    tier6: 3600
+    tier7: 7200
+
+  keyed-tiers:
+    - tier4
+    - tier5
+    - tier6
+    - tier7
+
+key-recipes:
+  enabled: true
+  recipes:
+    tier4:
+      - ENDER_PEARL
+      - IRON_INGOT
+      - REDSTONE
+    tier5:
+      - BLAZE_ROD
+      - COPPER_INGOT
+      - GOLD_INGOT
+    tier6:
+      - NETHER_STAR
+      - DIAMOND
+      - GOLD_BLOCK
+      - EMERALD_BLOCK
+    tier7:
+      - NETHER_STAR
+      - NETHERITE_INGOT
+      - DIAMOND_BLOCK
+      - TOTEM_OF_UNDYING
+
+  # Real-world autodrop windows (US Eastern: America/New_York = EST/EDT).
+  # First matching window wins. Times are HH:mm, end is exclusive. Use 24:00 for end of day.
+  schedule:
+    enabled: true
+    timezone: America/New_York
+    peak-min-interval: 600
+    peak-max-interval: 1200
+    outside-windows-mode: disabled
+    windows:
+      - start: "00:00"
+        end: "07:00"
+        mode: disabled
+      - start: "07:00"
+        end: "17:00"
+        mode: normal
+      - start: "17:00"
+        end: "22:00"
+        mode: peak
+      - start: "22:00"
+        end: "24:00"
+        mode: normal
+
+competition:
+  race-tracker: true
+  salvager-bonus: true
+  proximity-bossbar: true
+  proximity-radius: 12
+  squad-split: true
+  squad-split-tiers:
+    - tier5
+    - tier6
+    - tier7
+  salvager-xp:
+    tier1: 25
+    tier2: 50
+    tier3: 75
+    tier4: 100
+    tier5: 150
+    tier6: 250
+    tier7: 500
+
+leaderboard:
+  enabled: true
+  storage: sqlite
+  db-file: airdrop_stats.db
+
+flares:
+  enabled: true
+  result_tier: tier2
+  cooldown_seconds: 1800
+  announce_to_server: true
+  require_zone: false
+  recipe:
+    - BLAZE_POWDER
+    - COPPER_INGOT
+    - FLINT
+
+mystery_crate:
+  chance: 0.03
+
+crate_defence:
+  enabled: true
+  mob-count-scale: 1.0
+  tiers:
+    - tier5
+    - tier6
+    - tier7
+
+  guard-behavior:
+    defend-radius: 12.0
+    aggro-radius: 16.0
+    tick-interval: 20
+
+  guard-mob-pools:
+    tier5:
+      mobs:
+        ZOMBIE: 40
+        SKELETON: 40
+        HUSK: 20
+      jockey-chance: 0.0
+    tier6:
+      mobs:
+        ZOMBIE: 20
+        SKELETON: 20
+        HUSK: 15
+        VINDICATOR: 25
+        STRAY: 20
+      jockey-chance: 0.1
+    tier7:
+      mobs:
+        ZOMBIE: 10
+        SKELETON: 10
+        HUSK: 10
+        VINDICATOR: 20
+        PILLAGER: 15
+        STRAY: 10
+        WITHER_SKELETON: 15
+        WITCH: 10
+      jockey-chance: 0.2
+
+  guard-stats:
+    tier5:
+      health-multiplier: 1.5
+      damage-multiplier: 1.2
+      speed-multiplier: 1.0
+    tier6:
+      health-multiplier: 2.0
+      damage-multiplier: 1.5
+      speed-multiplier: 1.1
+    tier7:
+      health-multiplier: 3.0
+      damage-multiplier: 2.0
+      speed-multiplier: 1.2
+
+  guard-armor:
+    tier5:
+      helmet: IRON_HELMET
+      chestplate: ""
+      leggings: ""
+      boots: ""
+      drop-chance: 0.0
+      enchantments: []
+    tier6:
+      helmet: DIAMOND_HELMET
+      chestplate: IRON_CHESTPLATE
+      leggings: IRON_LEGGINGS
+      boots: IRON_BOOTS
+      drop-chance: 0.0
+      enchantments:
+        - "PROTECTION:1"
+    tier7:
+      helmet: NETHERITE_HELMET
+      chestplate: DIAMOND_CHESTPLATE
+      leggings: DIAMOND_LEGGINGS
+      boots: DIAMOND_BOOTS
+      drop-chance: 0.0
+      enchantments:
+        - "PROTECTION:2"
+        - "THORNS:1"
+
+debris:
+  enabled: true
+  duration_seconds: 600
+
+sirens:
+  enabled: true
+  tiers:
+    - tier5
+    - tier6
+    - tier7
+  interval_ticks: 600
+
+heatmap:
+  enabled: true
+  data-file: heatmap.dat
+
+discord:
+  enabled: true
+  webhook-url: 'https://clawd.your-domain/webhook/airdrop'
+  server-name: 'Oblivion Sanctum'
+  use-embeds: true
+  triggers:
+    - tier6_land
+    - tier6_claim
+    - tier7_land
+    - tier7_claim
+    - eclipse_all
+    - vote_reward
+    - event_start
+
+placeholderapi:
+  enabled: true
+
+vote-integration:
+  enabled: true
+  plugin: VotingPlugin
+  threshold: 50
+  window_minutes: 60
+  reward: drop_surge
+
+effects:
+  particle-density: 1.0
+  trail-interval-ticks: 2
+  beacon-interval-ticks: 5
+  active-glow-interval-ticks: 10
+
+sounds:
+  spawn-radius: 500.0
+  fall-loop-interval-ticks: 15
+  landing-radius: 200.0
+  open-radius: 50.0
+  landing-world-cue-enabled: true
+  landing-world-volume: 0.3
+  landing-world-min-tier: 4
+  landing-server-wide-enabled: true
+  landing-server-wide-volume: 0.15
+  landing-server-wide-min-tier: 6
+  server-wide-exclude-worlds: []
+  spawn-world-cue-enabled: true
+  spawn-world-cue-volume: 0.25
+  spawn-server-wide-enabled: false
+  spawn-server-wide-volume: 0.1
+  spawn-server-wide-min-tier: 6
+
+bossbar:
+  update-interval-ticks: 60
+  claimed-linger-ticks: 60
+  show-world-in-title: false
+  title-incoming: '&e⚙ AIRDROP INCOMING — {x}, {z} — {tier} ⚙'
+  title-landed: '&c⚙ AIRDROP LANDED — {x}, {z} — {tier} ⚙'
+  title-claimed: '&a⚙ CLAIMED by {player} — {x}, {z} ⚙'
+
+  # If a crate hasn't landed after this time, stop showing the bossbar and send coords in chat instead.
+  incoming-timeout:
+    enabled: true
+    minutes: 30
+    message: '&eAirdrop is taking too long to land. Coords: &f{x}&7, &f{z} &7(&f{tier}&7)'
+
+zoning:
+  max-attempts-per-drop: 40
+  min-distance-from-players: 200
+  allow-cave-spawns: true
+  cave-spawn-chance: 0.25
+  cave-scan-step-y: 2
+  cave-min-y: 20
+
+unclaimed-timeout:
+  enabled: true
+  minutes: 15
+  message: '&7The airdrop was lost to the void...'
+
+first-arrive-bonus:
+  enabled: true
+  xp: 100
+  radius: 5
+  message: '&a{player} arrived first! (+{xp} XP)'
+
+announce-format:
+  tier1: '&7[Salvage Drop] A crate falls near {x}, {z}.'
+  tier2: '&2[Patchwork Drop] Scrap metal rattles at {x}, {z}.'
+  tier3: '&6[Ironclad Drop] Copper sparks at {x}, {z}!'
+  tier4: '&b[Aetheric Drop] The aether stirs at {x}, {z}!'
+  tier5: '&3[Brass Drop] Gears grind at {x}, {z}!'
+  tier6: '&6&l[SOVEREIGN DROP] A golden crate descends at {x}, {z}!'
+  tier7: '&4&l[ECLIPSE] The void tears open. Something falls...'
+  mystery: '&d&l[???] A mysterious crate falls... somewhere.'
+  salvager: '&a{player} claimed the Salvager Bonus! (+{xp} XP)'
+  claimed: '&e{player} opened the {tier} crate!'

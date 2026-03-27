@@ -1,0 +1,46 @@
+plugins {
+    id 'java'
+    id 'com.github.johnrengelman.shadow' version '8.1.1'
+}
+
+group = 'dev.oblivionsanctum'
+version = '2.0.0'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+
+repositories {
+    mavenCentral()
+    maven { url = 'https://repo.papermc.io/repository/maven-public/' }
+    maven { url = 'https://maven.enginehub.org/repo/' }
+    maven { url = 'https://repo.extendedclip.com/content/repositories/placeholderapi/' }
+}
+
+dependencies {
+    compileOnly 'io.papermc.paper:paper-api:1.20.1-R0.1-SNAPSHOT'
+    compileOnly 'com.sk89q.worldguard:worldguard-bukkit:7.0.9'
+    compileOnly 'me.clip:placeholderapi:2.11.5'
+
+    implementation 'org.json:json:20231013'
+    implementation 'org.xerial:sqlite-jdbc:3.43.0.0'
+}
+
+shadowJar {
+    archiveClassifier.set('')
+    relocate 'org.json', 'dev.oblivionsanctum.libs.json'
+}
+
+tasks.named('build') {
+    dependsOn shadowJar
+}
+
+processResources {
+    filesMatching('plugin.yml') {
+        expand(
+            'version': project.version
+        )
+    }
+}
