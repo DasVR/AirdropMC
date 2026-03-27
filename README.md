@@ -40,12 +40,12 @@ Optional integrations:
 | Command | Permission | Purpose |
 | --- | --- | --- |
 | `/airdrop status` | `airdrop.use` | Show active drop details |
-| `/airdrop compass` | `airdrop.use` | Get/update tracking compass |
+| `/airdrop compass` | `airdrop.use` | Get/update tracking compass that points towards the active airdrop |
 | `/airdrop top [player]` | `airdrop.use` | Show leaderboard or player stats |
-| `/airdrop drop [tier] [x] [z]` | `airdrop.admin.drop` | Force a drop |
+| `/airdrop drop [tier] [x] [z]` | `airdrop.admin.drop` | Force a drop with specified tier and coordinates |
 | `/airdrop event <double\|eclipse\|surge> [minutes]` | `airdrop.admin.event` | Trigger event flow |
 | `/airdrop zones <list\|add\|remove> ...` | `airdrop.admin.zones` | Manage zones |
-| `/airdrop key give <player> <tier>` | `airdrop.admin.keys` | Give crate keys |
+| `/airdrop key give <player> <tier>` | `airdrop.admin.keys` | Give crate keys to specified player with specified tier |
 | `/airdrop reload` | `airdrop.admin.reload` | Reload configs |
 | `/airdrop history` | `airdrop.admin.history` | Show recent history entries |
 | `/airdrop replayfx` | `airdrop.admin.replayfx` | Replay active drop FX |
