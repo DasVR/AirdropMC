@@ -1,6 +1,6 @@
 # AirdropSystem (AirdropMC)
 
-Steampunk-themed Paper plugin that spawns competitive airdrop crates with events, keys, leaderboards, and server-side integrations.
+Steampunk-themed Paper plugin that spawns competitive airdrop crates with events, keys, leaderboards, and server-side integrations. Specifically tailored to be used for the Oblivion Sanctum Server.
 
 Licensed under GPL-3.0; see [LICENSE](LICENSE).
 
@@ -23,6 +23,7 @@ Optional integrations:
 - WorldGuard 7.x
 - PlaceholderAPI
 - VotingPlugin or NuVotifier
+- Discord Webhooks
 
 ## Quick Start (Server Owner)
 
